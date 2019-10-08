@@ -1,0 +1,38 @@
+package app;
+
+import app.HelloWorld;
+
+import java.awt.SystemTray;
+import java.util.List;
+
+public class App {
+    public static void main(String[] args) throws Exception {
+        HelloWorld helloWorld = new HelloWorld();
+        System.out.println("Hello Java");
+        System.out.println(helloWorld.getTitle());
+        helloWorld.setTitle("Something new");
+        System.out.println(helloWorld.getTitle());
+
+        //
+        helloWorld.addOtherNames("Hello Java");
+        helloWorld.addOtherNames("Hello Java 2");
+        helloWorld.addOtherNames("Hello Java 3");
+        List<String> names = helloWorld.getOtherNames();
+        names.forEach((x) -> System.out.println(x));
+        // for (String x: names) {
+        //     System.out.println(x);
+        // }
+        helloWorld.addOtherNames("name", 1);
+    }
+}
+
+
+
+Scanner in = new Scanner(System.in);
+        // System.out.print("Enter comma seperated words: ");
+        // String input = in.next();
+        // System.out.println(input);
+        // String[] str = input.split(",");
+        // for (String x: str){
+        //     System.out.println(x);
+        // }
